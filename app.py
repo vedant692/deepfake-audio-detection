@@ -19,7 +19,7 @@ st.write("Upload an audio clip to check whether it's genuine human speech or AI-
 
 uploaded = st.file_uploader(
     "Upload audio file",
-    type=["wav", "mp3", "m4a", "mp4", "ogg"]
+    type=["wav", "mp3"]
 )
 
 if uploaded is not None:
