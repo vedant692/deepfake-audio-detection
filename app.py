@@ -17,7 +17,10 @@ clf, scaler = load_model()
 st.title("🎙️ Deepfake Audio Detector")
 st.write("Upload an audio clip to check whether it's genuine human speech or AI-generated (deepfake).")
 
-uploaded = st.file_uploader("Upload audio file", type=["wav", "mp3"])
+uploaded = st.file_uploader(
+    "Upload audio file",
+    type=["wav", "mp3", "m4a", "mp4", "ogg"]
+)
 
 if uploaded is not None:
     with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as tmp:
